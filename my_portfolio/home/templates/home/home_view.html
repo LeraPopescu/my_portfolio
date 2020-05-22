@@ -1,0 +1,283 @@
+<!doctype html>
+<html lang="en">
+{% load static %}
+<!--{% load sass_tags %}-->
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
+    <meta name="generator" content="Jekyll v4.0.1">
+    <title>Valeria's Portfolio</title>
+
+
+    <!-- Bootstrap core CSS -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+<!--    <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">-->
+    <link rel="apple-touch-icon" href="/docs/4.5/assets/img/favicons/apple-touch-icon.png" sizes="180x180">
+    <link rel="icon" href="/docs/4.5/assets/img/favicons/favicon-32x32.png" sizes="32x32" type="image/png">
+    <link rel="icon" href="/docs/4.5/assets/img/favicons/favicon-16x16.png" sizes="16x16" type="image/png">
+    <link rel="manifest" href="/docs/4.5/assets/img/favicons/manifest.json">
+    <link rel="mask-icon" href="/docs/4.5/assets/img/favicons/safari-pinned-tab.svg" color="#563d7c">
+    <link rel="icon" href="/docs/4.5/assets/img/favicons/favicon.ico">
+    <meta name="msapplication-config" content="/docs/4.5/assets/img/favicons/browserconfig.xml">
+    <meta name="theme-color" content="#563d7c">
+
+
+    <style>
+        .bd-placeholder-img {
+            font-size: 1.125rem;
+            text-anchor: middle;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+            user-select: none;
+        }
+
+        @media (min-width: 768px) {
+            .bd-placeholder-img-lg {
+                font-size: 3.5rem;
+            }
+        }
+    </style>
+    <!-- Custom styles for this template -->
+<!--    <link type="text/css"  href=" sass_src 'home/styling.scss' " rel="stylesheet" media="screen">-->
+    <link type="text/css"  href="{% static 'home/style.css' %}" rel="stylesheet" media="screen">
+</head>
+<body id="page-top" class="index" data-pinterest-extension-installed="cr1.3.4">
+<main role="main">
+
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-default navbar-fixed-top">
+        <div class="container">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header page-scroll">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#top-nav">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="brand" href="https://github.com/LeraPopescu"><img src="{% static 'photo_me.jpg'  %}" class="img-responsive" title="trungk18" alt="trungk18" /></a>
+            </div>
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="top-nav">
+                <ul class="nav navbar-nav navbar-right">
+                    <li class="hidden active">
+                        <a href="#page-top"></a>
+                    </li>
+                    <li class="">
+                        <a class="page-scroll" name="#hash" href="#about">About me</a>
+                    </li>
+                    <li class="">
+                        <a class="page-scroll" name="#hash" href="#experience">Experience</a>
+                    </li>
+                    <li class="">
+                        <a class="page-scroll" name="#hash" href="#projects">Projects</a>
+                    </li>
+                    <li class="">
+                        <a class="page-scroll" name="#hash" href="#blog">Blog</a>
+                    </li>
+                    <li class="">
+                        <a class="page-scroll" name="#hash" href="#contact">Contact me</a>
+                    </li>
+                </ul>
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container-fluid -->
+    </nav>
+
+    <header>
+        <div class="container">
+            <div class="intro-text">
+                <div class="intro-lead-in">Hello Errbody</div>
+                <div class="intro-heading">Yes Mel, Ajmal, Chien, Junne maybe and Syok.</div>
+                <a href="#services" class="page-scroll btn btn-xl">Aku Bukan Sempit</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Content Section -->
+    <div class="content">
+        <section id="about"></section>
+        <section id="experience"></section>
+        <section id="projects"></section>
+        <section id="blog"></section>
+        <section id="contact"></section>
+    </div>
+
+
+
+
+
+
+    <!--    <section class="jumbotron text-center">-->
+<!--        <div class="container">-->
+<!--            <h1>Valeria Popescu</h1>-->
+<!--            <p class="lead text-muted"> I am an ambitious, driven, and keen to improve Computer Science Student. I am looking for great opportunities to develop myself and help others.    <p>-->
+<!--            <a href="mailto:popescu.valeria@outlook.com" class="btn btn-primary my-2">Email ME</a>-->
+<!--            <a href="#" class="btn btn-secondary my-2">Secondary action</a>-->
+<!--        </p>-->
+<!--            <img src = "{% static 'photo_me.jpg'  %}" height="300"> </img>-->
+<!--        </div>-->
+<!--    </section>-->
+
+<!--    <script type="text/javascript" async id="weight-loss-calculator" data-type="verywell-tool" data-vertical="verywellfit" src="https://www.verywellfit.com/static/4.155.0/components/tools/calculators/iframe-embed/embed.min.js?id=weight-loss-calculator"></script>-->
+<!--    <div class="album py-5 bg-light">-->
+<!--        <div class="container">-->
+
+<!--            <div class="row">-->
+
+<!--                {%for job in jobs.all %}-->
+
+<!--                <div class="col-md-4">-->
+<!--                    <a href="{% url 'detail' job.id %}">-->
+<!--                        <div class="card mb-4 shadow-sm">-->
+<!--                            <img class="card-img-top" src="{{ job.image.url }}">-->
+<!--                            <div class="card-body">-->
+<!--                                <p class="card-text">{{ job.summary }}</p>-->
+
+<!--                            </div>-->
+<!--                        </div>-->
+<!--                    </a>-->
+<!--                </div>-->
+
+<!--                {%endfor%}-->
+
+<!--            </div>-->
+<!--        </div>-->
+<!--    </div>-->
+
+</main>
+
+<script src="{% static 'jquery-3.5.1.min.js' %}"></script>
+<script src="{% static 'popper.min.js' %}"></script>
+<script src="{% static 'js/bootstrap.min.js' %}"></script>
+<script src="{% static 'js/rango-jquery.js' %}"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="https://code.jquery.com/jquery-1.12.0.min.js"></script>
+
+</body>
+</html>
+
+
+
+<!--<!doctype html>-->
+<!--<html>-->
+<!--{% load static %}-->
+<!--<head>-->
+
+<!--    <meta charset="utf-8">-->
+<!--    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">-->
+<!--    <meta name="description" content="">-->
+<!--    <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">-->
+<!--    <meta name="generator" content="Jekyll v4.0.1">-->
+
+<!--    <link rel="canonical" href="https://getbootstrap.com/docs/4.5/examples/album/">-->
+<!--    <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">-->
+<!--    <link rel="apple-touch-icon" href="/docs/4.5/assets/img/favicons/apple-touch-icon.png" sizes="180x180">-->
+<!--    <link rel="icon" href="/docs/4.5/assets/img/favicons/favicon-32x32.png" sizes="32x32" type="image/png">-->
+<!--    <link rel="icon" href="/docs/4.5/assets/img/favicons/favicon-16x16.png" sizes="16x16" type="image/png">-->
+<!--    <link rel="manifest" href="/docs/4.5/assets/img/favicons/manifest.json">-->
+<!--    <link rel="mask-icon" href="/docs/4.5/assets/img/favicons/safari-pinned-tab.svg" color="#563d7c">-->
+<!--    <link rel="icon" href="/docs/4.5/assets/img/favicons/favicon.ico">-->
+<!--    <meta name="msapplication-config" content="/docs/4.5/assets/img/favicons/browserconfig.xml">-->
+<!--    <meta name="theme-color" content="#563d7c">-->
+<!--    <title>Valeria's portfolio</title>-->
+<!--</head>-->
+<!--<body>-->
+
+<!--<div class="w3-top">-->
+<!--    <div class="w3-bar" id="myNavbar">-->
+<!--        <a class="w3-bar-item w3-button w3-hover-black w3-hide-medium w3-hide-large w3-right" href="javascript:void(0);" onclick="toggleFunction()" title="Toggle Navigation Menu">-->
+<!--            <i class="fa fa-bars"></i>-->
+<!--        </a>-->
+<!--        <a href="#home" class="w3-bar-item w3-button">HOME</a>-->
+<!--        <a href="#about" class="w3-bar-item w3-button w3-hide-small"><i class="fa fa-user"></i> ABOUT</a>-->
+<!--        <a href="#portfolio" class="w3-bar-item w3-button w3-hide-small"><i class="fa fa-th"></i> PORTFOLIO</a>-->
+<!--        <a href="#contact" class="w3-bar-item w3-button w3-hide-small"><i class="fa fa-envelope"></i> CONTACT</a>-->
+<!--        <a href="#" class="w3-bar-item w3-button w3-hide-small w3-right w3-hover-red">-->
+<!--            <i class="fa fa-search"></i>-->
+<!--        </a>-->
+<!--    </div>-->
+
+<!--    &lt;!&ndash; Navbar on small screens &ndash;&gt;-->
+<!--    <div id="navDemo" class="w3-bar-block w3-white w3-hide w3-hide-large w3-hide-medium">-->
+<!--        <a href="#about" class="w3-bar-item w3-button" onclick="toggleFunction()">ABOUT</a>-->
+<!--        <a href="#portfolio" class="w3-bar-item w3-button" onclick="toggleFunction()">PORTFOLIO</a>-->
+<!--        <a href="#contact" class="w3-bar-item w3-button" onclick="toggleFunction()">CONTACT</a>-->
+<!--        <a href="#" class="w3-bar-item w3-button">SEARCH</a>-->
+<!--    </div>-->
+<!--</div>-->
+<!--    <section class="menu1 menu horizontal-menu cid-r63shMX5Jb" id="menu1-x">-->
+
+<!--        &lt;!&ndash; <div class="menu-wrapper"> &ndash;&gt;-->
+<!--        <nav class="navbar navbar-dropdown navbar-expand-lg">-->
+<!--            <div class="menu-container mbr-px-5 container">-->
+<!--                &lt;!&ndash; SHOW LOGO &ndash;&gt;-->
+<!--                <div class="navbar-brand">-->
+
+<!--                    <span class="navbar-caption-wrap"><a class="navbar-caption mbr-bold text-black display-5" href="index.html">FitnessClub</a></span>-->
+<!--                </div>-->
+<!--                &lt;!&ndash; SHOW LOGO END &ndash;&gt;-->
+<!--                &lt;!&ndash; COLLAPSED MENU &ndash;&gt;-->
+<!--                <div class="collapse navbar-collapse" id="navbarSupportedContent">-->
+
+<!--                    &lt;!&ndash; NAVBAR ITEMS &ndash;&gt;-->
+<!--                    <ul class="navbar-nav nav-dropdown nav-right" data-app-modern-menu="true"><li class="nav-item">-->
+<!--                        <a class="nav-link mbr-semibold link text-black display-4" href="fitness-club.html#title3-16">-->
+<!--                            About us</a>-->
+<!--                    </li><li class="nav-item">-->
+<!--                        <a class="nav-link mbr-semibold link text-black display-4" href="fitness-club.html#article2-12">-->
+<!--                            Services</a>-->
+<!--                    </li>-->
+
+<!--                        <li class="nav-item">-->
+<!--                            <a class="nav-link mbr-semibold link text-black display-4" href="fitness-club.html#contacts1-1c">-->
+<!--                                Contact</a>-->
+<!--                        </li></ul>-->
+<!--                    &lt;!&ndash; NAVBAR ITEMS END &ndash;&gt;-->
+<!--                    &lt;!&ndash; SOCIAL ICON &ndash;&gt;-->
+<!--                    <div class="menu-social-list">-->
+
+
+
+<!--                        <a href="http://www.youtube.com/channel/UCt_tncVAetpK5JeM8L-8jyw" target="_blank">-->
+<!--                            <span class="amp-iconfont fa-youtube fa"></span>-->
+<!--                        </a><a href="https://www.facebook.com/pages/Mobirise/1616226671953247" target="_blank">-->
+<!--                        <span class="amp-iconfont fa-facebook-square fa"></span>-->
+<!--                    </a><a href="https://plus.google.com/u/0/+Mobirise/posts" target="_blank">-->
+<!--                        <span class="amp-iconfont fa-google-plus-circle fa"></span>-->
+<!--                    </a></div>-->
+<!--                    &lt;!&ndash; SOCIAL ICON END &ndash;&gt;-->
+<!--                    &lt;!&ndash; SHOW BUTTON &ndash;&gt;-->
+
+<!--                    &lt;!&ndash; SHOW BUTTON END &ndash;&gt;-->
+<!--                </div>-->
+<!--                &lt;!&ndash; COLLAPSED MENU END &ndash;&gt;-->
+
+<!--                <button on="tap:sidebar.toggle" class="ampstart-btn hamburger">-->
+<!--                    <span></span>-->
+<!--                    <span></span>-->
+<!--                    <span></span>-->
+<!--                    <span></span>-->
+<!--                </button>-->
+<!--            </div>-->
+<!--        </nav>-->
+<!--        &lt;!&ndash; AMP plug &ndash;&gt;-->
+
+<!--        &lt;!&ndash; </div> &ndash;&gt;-->
+<!--    </section>-->
+<!--    <p>Hi there!</p>-->
+<!--    <p>This will be the main portfolio page</p>-->
+
+<!--    <script src="{% static 'jquery-3.5.1.min.js' %}"></script>-->
+<!--    <script src="{% static 'popper.min.js' %}"></script>-->
+<!--    <script src="{% static 'js/bootstrap.min.js' %}"></script>-->
+
+<!--</body>-->
+<!--</html>-->
