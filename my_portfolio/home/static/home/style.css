@@ -29,6 +29,7 @@ font-face {
 
 body, html, main{
     height: 100%;
+
 }
 .navbar-default {
     padding: 30px 0;
@@ -81,7 +82,7 @@ li{
 
 .navbar-default .nav a{
     text-decoration: none;
-    color: #eb7e7b;
+    /*color: #eb7e7b;*/
 }
 
 /*.navbar-default .nav li a::after {*/
@@ -124,7 +125,7 @@ a[href] {
 
 
 #about {
-    background-color: #eb7e7b;
+    background-color: #ccffff;
 
     padding: 40px;
     /*text-align: center;*/
@@ -135,7 +136,7 @@ a[href] {
 }
 
 #experience {
-    background: #2dbccb;
+    background: #ccf2ff;
     padding: 40px;
     min-height: 100%;
 }
@@ -159,14 +160,15 @@ a[href] {
 }
 
 #projects {
-    padding: 40px;
-    background-color: #415c71;
-    text-align: center;
-    height: 100%;
+
+    padding: 10px;
+    background-color: #cce7ff;
+    /*text-align: center;*/
+    min-height: 100%;
 }
 
 #blog {
-    background-color: #7a43b6;
+    /*background-color: #7a43b6;*/
 }
 
 
@@ -404,21 +406,52 @@ blockquote {
 }
 
 .img-responsive {
+    vertical-align: middle;
     width: 100%;
     height: auto;
 }
 
-
-#projects .portfolio-item {
-    right: 0;
-    margin: 0 0 15px;
+#projects .container {
+    align-content: center;
+    margin-top: 150px;
+    /*padding-left: 2px;*/
+    /*padding-right: 2px;*/
+    /*margin-left: 0;*/
+    /*margin-right: 0;*/
 }
 
-#projects .portfolio-item .portfolio-link {
+#projects .col {
+    float: left;
+}
+
+#projects .row {
+    width: 100%;
+    vertical-align: middle;
+    align-content: center;
+    display: block;
+    padding: 0;
+    margin: 0;
+    margin-bottom: 30px;
+}
+#projects .portfolio-item {
+    right: 0;
+    margin: 0 0 20px 5px;
+    background-color: #fff;
+    vertical-align: middle;
+    text-align: center;
+    width: 24.5%;
+    height: 275px;
+    align-content: center;
+}
+#projects .portfolio-item a {
     display: block;
     position: relative;
     margin: 0 auto;
-    max-width: 400px;
+    vertical-align: middle;
+    width:  100%;
+    height: 100%;
+    align-content: center;
+
 }
 
 
@@ -427,10 +460,12 @@ blockquote {
     width: 100%;
     height: 100%;
     opacity: 0;
-    background: #1ee2e7;
+    vertical-align: middle;
+    color: #ccffff;
     -webkit-transition: all ease .5s;
     -moz-transition: all ease .5s;
     transition: all ease .5s;
+    align-content: center;
 }
 
 
@@ -440,13 +475,14 @@ blockquote {
 
 #projects .portfolio-item .portfolio-link .portfolio-hover .portfolio-hover-content {
     position: absolute;
-    top: 50%;
+    top: 4.5%;
     width: 100%;
-    height: 20px;
+    height: 100%;
     margin-top: -12px;
+    vertical-align: middle;
     text-align: center;
     font-size: 20px;
-    color: #fff;
+    background: #ccffff;
 }
 
 #projects .portfolio-item .portfolio-link .portfolio-hover .portfolio-hover-content i {
@@ -456,8 +492,8 @@ blockquote {
 
 #projects .portfolio-item .portfolio-caption {
     margin: 0 auto;
-    padding: 25px;
-    max-width: 400px;
+    padding: 15px;
+    width: 100%;
     text-align: center;
     background-color: #fff;
 }
@@ -486,7 +522,9 @@ blockquote {
     }
 }
 
-.portfolio-modal .modal-dialog {
+.portfolio-modal {
+    display: block;
+    margin: 0;
     padding: 100px 0;
     min-height: 100%;
     width: 100%;

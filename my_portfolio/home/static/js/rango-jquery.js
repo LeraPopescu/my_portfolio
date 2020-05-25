@@ -47,6 +47,8 @@ AOS.init({
 $(function() {
     ScrollReveal().reveal('.timeline-item .in-left');
 });
+
+// $('#portfolioModal1').modal();
 //
 // $(function(){
 //
