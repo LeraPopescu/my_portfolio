@@ -11,6 +11,7 @@ from django.db import models
 
 # Create your models here.
 
+
 class Job(models.Model):
     #id
     id=models.IntegerField(primary_key=True, default="")
@@ -42,3 +43,13 @@ class Project(models.Model):
     def __str__(self):
         return self.project_name
 
+
+class BlogPost(models.Model):
+
+    blog_post_name=models.CharField(max_length=200)
+    blog_post_descr=models.CharField(max_length=200,default="")
+    blog_text=models.TextField(blank=True)
+    blog_image=models.ImageField(upload_to='images/')
+
+    def __str__(self):
+        return self.blog_post_name

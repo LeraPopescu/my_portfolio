@@ -1,7 +1,6 @@
 <!doctype html>
 <html lang="en" class="sr">
 {% load static %}
-<!--{% load sass_tags %}-->
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -49,7 +48,7 @@
     </style>
     <!-- Custom styles for this template -->
 <!--    <link type="text/css"  href=" sass_src 'home/styling.scss' " rel="stylesheet" media="screen">-->
-    <link type="text/css"  href="{% static 'home/style.css' %}" rel="stylesheet" media="screen">
+    <link type="text/css"  href="static/home/style.css" rel="stylesheet" media="screen">
 </head>
 <body id="page-top">
 <main role="main">
@@ -150,7 +149,7 @@
                     <div class="row" >
 
                         {%for project in projects.all %}
-                            <div class="col portfolio-item">
+                            <div class="col portfolio-item" data-aos="{% if forloop.counter|divisibleby:2 %}flip-left{% else  %}flip-right{% endif %}">
                                 <a href="#portfolioModal1" class="portfolio-link" data-toggle="modal">
                                     <div class="portfolio-hover">
                                         <div class="portfolio-hover-content">
@@ -167,39 +166,71 @@
                         {%endfor%}
 
 
-<!--                        <div class="col-md-4 col-sm-6 portfolio-item">-->
-<!--                            <a href="#portfolioModal5" class="portfolio-link" data-toggle="modal">-->
-<!--                                <div class="portfolio-hover">-->
-<!--                                    <div class="portfolio-hover-content">-->
-<!--                                        <i class="fa fa-plus fa-3x"></i>-->
-<!--                                    </div>-->
-<!--                                </div>-->
-<!--                                <img src="https://unsplash.imgix.net/46/Ov6ZY1zLTWmhPC0wFysP_IMG_2896_edt.jpg?q=75&w=1080&h=1080&fit=max&fm=jpg&auto=format&s=6518e4df89659818f6c0392175a9c5e6" class="img-responsive" alt="">-->
-<!--                            </a>-->
-<!--                            <div class="portfolio-caption">-->
-<!--                                <h4>Escape</h4>-->
-<!--                                <p class="text-muted">Website Design</p>-->
-<!--                            </div>-->
-<!--                        </div>-->
-<!--                        <div class="col-md-4 col-sm-6 portfolio-item">-->
-<!--                            <a href="#portfolioModal6" class="portfolio-link" data-toggle="modal">-->
-<!--                                <div class="portfolio-hover">-->
-<!--                                    <div class="portfolio-hover-content">-->
-<!--                                        <i class="fa fa-plus fa-3x"></i>-->
-<!--                                    </div>-->
-<!--                                </div>-->
-<!--                                <img src="https://unsplash.imgix.net/uploads%2F1411419068566071cef10%2F7562527b?q=75&w=1080&h=1080&fit=max&fm=jpg&auto=format&s=240c45655f09c546232a6f106688e502" class="img-responsive" alt="">-->
-<!--                            </a>-->
-<!--                            <div class="portfolio-caption">-->
-<!--                                <h4>Dreams</h4>-->
-<!--                                <p class="text-muted">Website Design</p>-->
-<!--                            </div>-->
-<!--                        </div>-->
-<!--                    </div>-->
                     </div>
                 </div>
         </section>
-        <section id="blog"></section>
+        <section id="blog">
+            <div class="container">
+
+                {%for post in posts.all %}
+                    <div class="blog-card">
+                        <div class="meta">
+                            <div class="photo">
+    <!--                            <img src="{% static 'photo_me.jpg'  %}" class="img-responsive"/>-->
+                            </div>
+
+    <!--                        <div class="photo" ></div>-->
+                            <ul class="details">
+                                <li class="author"><a href="#">John Doe</a></li>
+                                <li class="date">Aug. 24, 2015</li>
+                                <li class="tags">
+                                    <ul>
+                                        <li><a href="#">Learn</a></li>
+                                        <li><a href="#">Code</a></li>
+                                        <li><a href="#">HTML</a></li>
+                                        <li><a href="#">CSS</a></li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="description">
+                            <h1>{{ post.blog_post_name }}</h1>
+                            <h2>Opening a door to the future</h2>
+                            <p> {{ post.blog_post_descr }} </p>
+                            <p class="read-more">
+                                <a href="#">Read More</a>
+                            </p>
+                        </div>
+                    </div>
+                {%endfor%}
+                <div class="blog-card alt">
+                    <div class="meta">
+                        <div class="photo">
+<!--                            <img src="{% static 'photo_me.jpg'  %}" class="img-responsive"/>-->
+                        </div>
+                        <ul class="details">
+                            <li class="author"><a href="#">Jane Doe</a></li>
+                            <li class="date">July. 15, 2015</li>
+                            <li class="tags">
+                                <ul>
+                                    <li><a href="#">Learn</a></li>
+                                    <li><a href="#">Code</a></li>
+                                    <li><a href="#">JavaScript</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="description">
+                        <h1>Mastering the Language</h1>
+                        <h2>Java is not the same as JavaScript</h2>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad eum dolorum architecto obcaecati enim dicta praesentium, quam nobis! Neque ad aliquam facilis numquam. Veritatis, sit.</p>
+                        <p class="read-more">
+                            <a href="#">Read More</a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
         <section id="contact"></section>
 <!--        <div class="portfolio-modal modal fade" id="portfolioModal1" tabindex="-1" role="dialog" aria-hidden="true">-->
 <!--            <div class="modal-dialog">-->
