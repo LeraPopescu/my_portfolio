@@ -44,9 +44,6 @@ AOS.init({
     duration: 1200,
 });
 
-$(function() {
-    ScrollReveal().reveal('.timeline-item .in-left');
-});
 
 // $('#portfolioModal1').modal();
 //

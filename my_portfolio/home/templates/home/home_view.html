@@ -15,6 +15,9 @@
     </script>
 
 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<!--    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">-->
     <!-- Bootstrap core CSS -->
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
@@ -48,7 +51,8 @@
     </style>
     <!-- Custom styles for this template -->
 <!--    <link type="text/css"  href=" sass_src 'home/styling.scss' " rel="stylesheet" media="screen">-->
-    <link type="text/css"  href="static/home/style.css" rel="stylesheet" media="screen">
+    <link type="text/css"  href="{% static 'home/style.css' %}" rel="stylesheet">
+<!--        <link type="text/css"  href="/home/static/home/style.css" rel="stylesheet" media="screen">-->
 </head>
 <body id="page-top">
 <main role="main">
@@ -86,7 +90,7 @@
                         <a class="page-scroll" name="#hash" href="#blog">Blog</a>
                     </li>
                     <li class="">
-                        <a class="page-scroll" name="#hash" href="#contact">Contact me</a>
+                        <a class="page-scroll" name="#hash" href="#awards">Awards</a>
                     </li>
                 </ul>
             </div>
@@ -97,24 +101,20 @@
 
 
     <!-- Content Section -->
-        <div id="about" class="about-content">
-                <p class = "top">
-                    My name is Valeria Popescu
-                </p>
-                <p class = "top">
-                    I am a first year student at the University of Birmingham, United Kingdom
-                </p>
-                <p class = "top">
-                    I am passionate about Software Engineer
-                </p>
-                <p class = "top">
-                    Welcome to my website
-                </p>
-                <p class = "top">
-                    Continue scrolling to find out more about my experience moreeee
-                </p>
-
-        </div>
+        <section id="about">
+            <div class="container">
+                <p class = "top">My name is Valeria Popescu</p>
+                <p class = "top">I am a first year student at the University of Birmingham, United Kingdom</p>
+                <p class = "top">I am passionate about Software Engineer</p>
+                <p class = "top">Welcome to my website</p>
+                <p class = "top">Continue scrolling to find out more about my experience moreeee</p>
+            </div>
+            <div class="ex4">
+                <i class="fa fa-linkedin fa-5x" aria-hidden="true"></i>
+                <i class="fa fa-github fa-5x" aria-hidden="true"></i>
+                <i class="fa fa-envelope-open fa-5x" aria-hidden="true"></i>
+            </div>
+        </section>
         <section id="experience" class="timeline">
             <div class="container">
 
@@ -150,13 +150,16 @@
 
                         {%for project in projects.all %}
                             <div class="col portfolio-item" data-aos="{% if forloop.counter|divisibleby:2 %}flip-left{% else  %}flip-right{% endif %}">
-                                <a href="#portfolioModal1" class="portfolio-link" data-toggle="modal">
-                                    <div class="portfolio-hover">
+                                <a href="{% url 'project' project.project_name %}" class="portfolio-link" data-toggle="modal">
+                                    <div class="portfolio-hover"  data-text="{{ project.project_summary}}">
                                         <div class="portfolio-hover-content">
-                                            <i class="fa fa-plus fa-3x"></i>
+<!--                                            <i class="fa fa-plus fa-3x"></i>-->
+
                                         </div>
+
                                     </div>
-                                    <img src="{{ project.image.url }} " class="img-responsive" alt="">
+<!--                                    <div class="appearText"> {{ project.project_summary}} </div>-->
+                                    <img  src="{{ project.image.url }} " class="img-responsive" alt="">
                                 </a>
                                 <div class="portfolio-caption">
                                     <h4>{{ project.project_name}}</h4>
@@ -181,16 +184,16 @@
 
     <!--                        <div class="photo" ></div>-->
                             <ul class="details">
-                                <li class="author"><a href="#">John Doe</a></li>
-                                <li class="date">Aug. 24, 2015</li>
-                                <li class="tags">
-                                    <ul>
-                                        <li><a href="#">Learn</a></li>
-                                        <li><a href="#">Code</a></li>
-                                        <li><a href="#">HTML</a></li>
-                                        <li><a href="#">CSS</a></li>
-                                    </ul>
-                                </li>
+                                <li class="author"><a href="#">Valeria Popescu</a></li>
+                                <li class="date">01 Jun 2020</li>
+<!--                                <li class="tags">-->
+<!--                                    <ul>-->
+<!--                                        <li><a href="#">Learn</a></li>-->
+<!--                                        <li><a href="#">Code</a></li>-->
+<!--                                        <li><a href="#">HTML</a></li>-->
+<!--                                        <li><a href="#">CSS</a></li>-->
+<!--                                    </ul>-->
+<!--                                </li>-->
                             </ul>
                         </div>
                         <div class="description">
@@ -198,7 +201,7 @@
                             <h2>Opening a door to the future</h2>
                             <p> {{ post.blog_post_descr }} </p>
                             <p class="read-more">
-                                <a href="#">Read More</a>
+                                <a href="{% url 'blog' post.blog_text %}">Read More</a>
                             </p>
                         </div>
                     </div>
@@ -231,41 +234,136 @@
                 </div>
             </div>
         </section>
-        <section id="contact"></section>
-<!--        <div class="portfolio-modal modal fade" id="portfolioModal1" tabindex="-1" role="dialog" aria-hidden="true">-->
-<!--            <div class="modal-dialog">-->
-<!--                <div class="modal-content">-->
-<!--                    <div class="close-modal" data-dismiss="modal">-->
-<!--                        <div class="lr">-->
-<!--                            <div class="rl">-->
-<!--                            </div>-->
-<!--                        </div>-->
-<!--                    </div>-->
-<!--                    <div class="container">-->
-<!--                        <div class="row">-->
-<!--                            <div class="col-lg-8 col-lg-offset-2">-->
-<!--                                <div class="modal-body">-->
-<!--                                    &lt;!&ndash; Project Details Go Here &ndash;&gt;-->
-<!--                                    <h2>Project Name</h2>-->
-<!--                                    <p class="item-intro text-muted">Lorem ipsum dolor sit amet consectetur.</p>-->
-<!--                                    <img class="img-responsive" src="https://unsplash.imgix.net/uploads%2F1411419068566071cef10%2F7562527b?q=75&w=1080&h=1080&fit=max&fm=jpg&auto=format&s=240c45655f09c546232a6f106688e502" alt="">-->
-<!--                                    <p>Use this area to describe your project. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est blanditiis dolorem culpa incidunt minus dignissimos deserunt repellat aperiam quasi sunt officia expedita beatae cupiditate, maiores repudiandae, nostrum, reiciendis facere nemo!</p>-->
-<!--                                    <p>-->
-<!--                                        <strong>Want these icons in this portfolio item sample?</strong>You can download 60 of them for free, courtesy of <a href="https://getdpd.com/cart/hoplink/18076?referrer=bvbo4kax5k8ogc">RoundIcons.com</a>, or you can purchase the 1500 icon set <a href="https://getdpd.com/cart/hoplink/18076?referrer=bvbo4kax5k8ogc">here</a>.</p>-->
-<!--                                    <ul class="list-inline">-->
-<!--                                        <li>Date: July 2014</li>-->
-<!--                                        <li>Client: Round Icons</li>-->
-<!--                                        <li>Category: Graphic Design</li>-->
-<!--                                    </ul>-->
+        <section id="awards">
+            <div class="container">
+                <div class="row">
+                    <div class="col-xs-12">
+                        <div class="section-title text-center">
+                            <h2>MY ACHIEVEMENTS</h2>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-xs-12 col-sm-4">
+                        <div class="service-list text-center wow fadeIn">
+                            <div class="icon">
+                                <i class="fa  fa-laptop"></i>
+                            </div>
+                            <h2>Programming competitions</h2>
+<!--                            <p>Quis porttitor congue, elit erat euismod orci, ac placerat dolor lectus quis orci. Phasellus bibendum ac placerat dolor lectus quis orci.</p>-->
 
-<!--                                    <button type="button" class="btn btn-primary" data-dismiss="modal"> Close Project</button>-->
-<!--                                </div>-->
+                            <p>
+                                Computer Sicence Olympiad: Bronze Medal
+                            </p>
+                            <p>
+                                Honorable Mention ​ at “Marian Tarina” Computer Science Contest ​ (March 2017 and March 2019, Turda)
+                            </p>
+                            <p>
+                                Honorable Mention​ at “Grigore Moisil” programming contest ​ (April 2019, Baia-Mare)
+                            </p>
+                            <p>
+                                Participant at “Mindcoding” ​ International Programming contest​ ​ (May 2017)
+                            </p>
+                            <p>
+                                Catalyst Coding Contest, Cluj: ​ 14​ th​ place out of 200​ on November 2018
+
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="col-xs-12 col-sm-4">
+                        <div class="service-list text-center wow fadeIn">
+                            <div class="icon">
+                                <i class="fa fa-users"></i>
+                            </div>
+                            <h2>Societies, Communities</h2>
+<!--                            <p>Quis porttitor congue, elit erat euismod orci, ac placerat dolor lectus quis orci. Phasellus bibendum ac placerat dolor lectus quis orci.</p>-->
+
+                            <p>
+                                Vice Presient - Computer Science Society UoB
+                            </p>
+                            <p>
+                               Founder - Women in Tech Society UoB
+                            </p>
+                            <p>
+                               Organiser - Meet IT Winter Workshops(2020)
+                            </p>
+                            <p>
+                                Main chief Organiser - Meet IT Romanian Camp
+                            </p>
+                            <p>
+                                First year representative Teaching Committee School of Computer Science
+                            </p>
+                            <p>
+                                Global Ambassador WomenTech Network
+                            </p>
+                            <p>
+                                Ambassador manager - Technovation Challenge
+                            </p>
+
+                        </div>
+                    </div>
+
+                    <div class="col-xs-12 col-sm-4">
+                        <div class="service-list text-center wow fadeIn">
+                            <div class="icon">
+                                <i class="fa fa-line-chart"></i>
+                            </div>
+                            <h2>Awards, scholarships</h2>
+<!--                            <p>Quis porttitor congue, elit erat euismod orci, ac placerat dolor lectus quis orci. Phasellus bibendum ac placerat dolor lectus quis orci.</p>-->
+                            <p>
+                                Computer Science Excellence Scholarship (1 of the 10)
+                            </p>
+                            <p>
+                                1st place - UniSain Hackathon
+                            </p>
+                            <p>
+                                Special prize from Fortech Company - Discover Your passion in IT
+                            </p>
+                            <p>
+                                Top 3 students all high school years
+                            </p>
+                            <p>
+                               2nd Student in school with the average of 9.91 / 10 in Exams
+                            </p>
+
+
+                        </div>
+                    </div>
+
+<!--                    <div class="col-xs-12 col-sm-4">-->
+<!--                        <div class="service-list text-center wow fadeIn">-->
+<!--                            <div class="icon">-->
+<!--                                <i class="fa fa-star"></i>-->
 <!--                            </div>-->
+<!--                            <h4>Women empowerment</h4>-->
+<!--                            <p>Quis porttitor congue, elit erat euismod orci, ac placerat dolor lectus quis orci. Phasellus bibendum ac placerat dolor lectus quis orci.</p>-->
 <!--                        </div>-->
 <!--                    </div>-->
-<!--                </div>-->
-<!--            </div>-->
-<!--        </div>-->
+
+<!--                    <div class="col-xs-12 col-sm-4">-->
+<!--                        <div class="service-list text-center wow fadeIn">-->
+<!--                            <div class="icon">-->
+<!--                                <i class="fa fa-lightbulb-o"></i>-->
+<!--                            </div>-->
+<!--                            <h4>Hackathons, Projects</h4>-->
+<!--                            <p>Quis porttitor congue, elit erat euismod orci, ac placerat dolor lectus quis orci. Phasellus bibendum ac placerat dolor lectus quis orci.</p>-->
+<!--                        </div>-->
+<!--                    </div>-->
+
+<!--                    <div class="col-xs-12 col-sm-4">-->
+<!--                        <div class="service-list text-center wow fadeIn">-->
+<!--                            <div class="icon">-->
+<!--                                <i class="fa fa-desktop"></i>-->
+<!--                            </div>-->
+<!--                            <h4>Theme Development</h4>-->
+<!--                            <p>Quis porttitor congue, elit erat euismod orci, ac placerat dolor lectus quis orci. Phasellus bibendum ac placerat dolor lectus quis orci.</p>-->
+<!--                        </div>-->
+<!--                    </div>-->
+
+                </div>
+            </div>
+        </section>
 
 
 

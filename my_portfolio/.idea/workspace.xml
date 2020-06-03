@@ -36,7 +36,7 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../portfolio-project" />
     <property name="project.structure.last.edited" value="SDKs" />
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.0" />
@@ -64,7 +64,8 @@
       <workItem from="1590406722704" duration="353000" />
       <workItem from="1590407196560" duration="5114000" />
       <workItem from="1590414083835" duration="19566000" />
-      <workItem from="1590570033154" duration="20828000" />
+      <workItem from="1590570033154" duration="42082000" />
+      <workItem from="1591192698824" duration="13505000" />
     </task>
     <servers />
   </component>
@@ -72,6 +73,14 @@
     <option name="version" value="1" />
   </component>
   <component name="WindowStateProjectService">
+    <state x="676" y="289" width="624" height="526" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog" timestamp="1591192644038">
+      <screen x="67" y="27" width="1853" height="1053" />
+    </state>
+    <state x="676" y="289" width="624" height="526" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog/67.27.1853.1053@67.27.1853.1053" timestamp="1591192644038" />
+    <state x="776" y="310" width="424" height="484" key="FileChooserDialogImpl" timestamp="1591095110929">
+      <screen x="67" y="27" width="1853" height="1053" />
+    </state>
+    <state x="776" y="310" width="424" height="484" key="FileChooserDialogImpl/67.27.1853.1053@67.27.1853.1053" timestamp="1591095110929" />
     <state width="263" height="500" key="HiddenNamespacesPopup" timestamp="1590403836281">
       <screen x="67" y="27" width="1853" height="1053" />
     </state>
@@ -88,6 +97,10 @@
       <screen x="67" y="27" width="1853" height="1053" />
     </state>
     <state x="647" y="170" width="683" height="764" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser/67.27.1853.1053@67.27.1853.1053" timestamp="1590174662247" />
+    <state x="302" y="279" width="1372" height="547" key="new project wizard" timestamp="1591095094638">
+      <screen x="67" y="27" width="1853" height="1053" />
+    </state>
+    <state x="302" y="279" width="1372" height="547" key="new project wizard/67.27.1853.1053@67.27.1853.1053" timestamp="1591095094638" />
     <state x="656" y="257" width="672" height="678" key="search.everywhere.popup" timestamp="1590319862775">
       <screen x="67" y="27" width="1853" height="1053" />
     </state>
