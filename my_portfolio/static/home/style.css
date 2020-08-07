@@ -110,9 +110,14 @@ a[href] {
 #about {
     padding: 40px;
     min-height: 100%;
+    margin-top: 100px;
+    background: #1B2030 url(http://www.vaahana.net/wp-content/uploads/2014/11/correct2-too-small.jpg)  top center no-repeat;
+    background-size: cover;
+
 }
 
 #about .container {
+
     margin-top: 200px;
 }
 
@@ -121,6 +126,7 @@ a[href] {
     white-space: nowrap;
     overflow: hidden;
     font-size:20px;
+    color: #fff;
     font-family: 'Source Code Pro', monospace;
     animation: animated-text 4s steps(29,end) 1s 1 normal both;
 }
@@ -141,17 +147,23 @@ a[href] {
 
 
 .ex4 {
-    margin-top: 50px;
+
+    margin-top: 100px;
     padding: 60px 0;
-    /*text-align: center;*/
+    text-align: center;
 }
 .ex4 i {
-    margin: 0 20px;
+    margin: 0 30px;
     color: #00b3ee;
     cursor: pointer;
 }
 
+.container .downloadbttn {
+    margin-top: 50px;
 
+    padding: 60px 0;
+    text-align: center;
+}
 
 
 
@@ -205,7 +217,7 @@ a[href] {
 
 .timeline-item {
     width: 100%;
-    margin-bottom: -80px;
+    margin-bottom: 10px;
 }
 .timeline-item:nth-child(even) .timeline-content {
     float: right;
@@ -259,6 +271,7 @@ a[href] {
     width: 0;
     height: 0;
     top: 80px;
+    padding-bottom: 20px;
     right: -15px;
     border-width: 10px 0 10px 15px;
     border-color: transparent transparent transparent #f5f5f5;
@@ -325,7 +338,8 @@ blockquote {
     padding: 10px;
     position: absolute;
     top: 0;
-    right: 0;
+    /*right: 0;*/
+    right: auto;
     left: 0;
 }
 
@@ -492,7 +506,7 @@ blockquote {
 
 
 #blog {
-    height: 100%;
+    min-height: 100%;
     padding: 10px;
 
     /*background-color: #7a43b6;*/
@@ -720,10 +734,86 @@ blockquote {
 }
 
 
+
+
+
+/**awards**/
+
+
+
+
+
 #awards {
-    background-color: #e4606d;
-    height: 100%;
+
+    background-color: #cce7ff;
+    min-height: 100%;
+    padding: 40px;
 }
+
+#awards .container{
+
+    margin-top: 150px;
+}
+
+#awards .container .section-title {
+    margin: 50px;
+}
+
+#awards .container .service-list {
+    width: 100%;
+    float: left;
+    height: auto;
+    margin: 0 0 50px;
+}
+
+.service-list h4 {
+    text-transform: capitalize;
+}
+
+.service-list p {
+    font-size: 17px;
+    margin: 0;
+}
+
+.service-list .icon {
+    width: 100%;
+    float: left;
+    height: auto;
+    margin: 0 0 20px;
+}
+
+.service-list .fa {
+    width: 85px;
+    line-height: 85px;
+    background: #fff;
+    border-radius: 50%;
+    display: inline-block;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+    font-size: 28px;
+    -webkit-transition: all 0.4s ease-in-out;
+    -moz-transition: all 0.4s ease-in-out;
+    -ms-transition: all 0.4s ease-in-out;
+    transition: all 0.4s ease-in-out;
+}
+
+.service-list h3 {
+    text-transform: capitalize;
+}
+
+.service-list:hover .icon .fa {
+    background: #ff8500;
+    color: #fff;
+}
+
+#awards .col-xs-12:nth-last-child(-n+3) .service-list {
+    margin: 0;
+}
+
+
+/*services ends*/
+
+
+/*================================= Achievements =================================*/
 
 
 

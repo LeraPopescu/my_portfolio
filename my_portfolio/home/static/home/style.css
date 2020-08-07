@@ -158,7 +158,12 @@ a[href] {
     cursor: pointer;
 }
 
+.container .downloadbttn {
+    margin-top: 50px;
 
+    padding: 60px 0;
+    text-align: center;
+}
 
 
 
@@ -212,7 +217,7 @@ a[href] {
 
 .timeline-item {
     width: 100%;
-    margin-bottom: -80px;
+    margin-bottom: -20px;
 }
 .timeline-item:nth-child(even) .timeline-content {
     float: right;
@@ -254,6 +259,7 @@ a[href] {
     width: 45%;
     /*padding-top: 40px;*/
     padding-bottom: 5px;
+    margin-bottom: 10px;
     border-radius: 4px;
 
     background: #f5f5f5;
@@ -266,6 +272,7 @@ a[href] {
     width: 0;
     height: 0;
     top: 80px;
+    padding-bottom: 20px;
     right: -15px;
     border-width: 10px 0 10px 15px;
     border-color: transparent transparent transparent #f5f5f5;
@@ -332,7 +339,8 @@ blockquote {
     padding: 10px;
     position: absolute;
     top: 0;
-    right: 0;
+    /*right: 0;*/
+    right: auto;
     left: 0;
 }
 
@@ -737,7 +745,8 @@ blockquote {
 
 
 #awards {
-    background-color: #e4606d;
+
+    background-color: #cce7ff;
     min-height: 100%;
     padding: 40px;
 }
