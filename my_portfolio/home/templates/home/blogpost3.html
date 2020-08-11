@@ -1,49 +1,192 @@
 <html>
 
+{% load static %}
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
+    <meta name="generator" content="Jekyll v4.0.1">
+    <title>Valeria's Portfolio</title>
+
+    <script src="https://unpkg.com/scrollreveal"></script>
+    <script>
+        ScrollReveal({ reset: true });
+    </script>
 
 
-<h1>
-    A post discussing how your site is structured and in your own words a description of how Django works.
-</h1>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
-<p>
-    As a first-year Computer Science student at UOB, I got the chance to be part of amazing communities and meet wonderful people which helped me develop and learn a lot about students' needs. My experience during this year brought me through the organization of international camps, being part of the Computer Science Society at the university, getting internships, and Spring Week offers and ultimately to the idea of running a Women in Tech Society at university? Whoa! That has definitely been a thriving year for me. How did I end up doing all these things? What are my plans for the future and for society?
-</p>
-<p>
-    Well, I guess one of the things that played significant importance in my achievements was my passion for competitive programming. Solving problems on websites like Codeforces, TopCoder, CodeChef, and preparing for contests and Computer Science Olympiad in my high school years has definitely put a strong base that has helped me through interviews.
-    Through one of these websites, ironically, I have heard about Meet IT and participated in their first camp. I was so amazed by the community of smart and ambitious people that I joined Meet IT as an organizer for camps and other programs.
-</p>
-<p>
-    Once I got to university, I was more than determined to join all the opportunities that would help me develop. I run for being a first-year representative, even if I was afraid to do it in the beginning because of the competition. Frankly, my motivation to be part of the committee paid off and I got to spend a wonderful year close to understanding how to run and organize events and getting a better insight into all the things that are happening during the year for people interesting in technology. In my second year, I was selected to be the Vice President for the Computer Science society and I believe I am ready to deliver best quality for next events, welcome new students in our warm community, and build stronger connections between all of us.
-</p>
-<p>
-    I was also multiple times asked how did I get an internship in my first year. The truth is I was strongly motivated to get one even before starting university. I believe internships are the best way to get work experience, become better prepared for work after university, and understand more about yourself and what you want to do in the future.
-</p>
-<p>
-    One of the most important things to keep in mind if you want to get an internship for the summer. Start applying early. And by applying early I mean start looking for opportunities no later than October. Many companies, especially the big ones, open their job applications early in Autumn, and they recruit on a rolling basis. So sometimes, even if you apply before the deadline, you might not get it because they already filled all positions.
-</p>
-<p>
-    Applying for an internship position, usually, does not take a lot of time if you have a CV prepared and optionally a Cover Letter. The first step in your application process will most certainly be CV screening, where your CV is judged, by a person, or sometimes not (because of the huge load of application they receive). Therefore you have to make sure your CV is well prepared and you have everything that you think is worthy, because this step determines whether or not you will get to the next step (interviews). To have a strong CV, make sure you get involved in activities, participate in hackathons, take up some courses, or start some side-projects. When you apply, you can't really do anything more here rather than making sure your application is the strongest possible and just wait.
-</p>
-<p>
-    If you are successful, you will possibly have an HR interview, which is usually aimed at making you get a better understanding of the company and the job, and of course, giving you the first opportunity to introduce yourself and showcase why you are a strong candidate. It's important that you are well informed about the position you applied to and the company before the interview. You can find out more about it on their website or Glassdoor.
-</p>
-<p>
-    Technical interviews are usually aimed at analyzing your programming and thinking skills. The way I felt best for me to prepare for interviews was to do mock interviews with friends or using Pramp, which helped me get better at explaining my train of thoughts to another person, getting better at solving problems at the first sight and write more clean code during an interview. In regards to the best ways to prepare for the kind of programming problems in interviews, I recommend Leetcode. It is very good to act like you are in an interview every time you solve a problem, think about complexities, and how to improve your solutions!
-    I feel that the best way to getting better at interviews is to actually have as many as possible. I know mock interviews helped me a lot. But actually applying for internships and getting real-life experience in interviews was the most valuable for me, as it made me realize what I need to improve in myself. Of course, I was super nervous and even afraid to apply or to go for interviews. But sometimes, getting your CV ready, asking anyone you know for help, preparing for interviews intensely, waking up at 5 am to go to another city for a 2h interview that you are really stressed about is a choice that can get you an awesome summer experience! Plus that you will regret not having applied for an internship more than being mad about the way you performed during an interview.
-</p>
-<p>
-    During my first year, I applied to any opportunity I found, even if I thought I am not qualified enough for it, or I was afraid. Great work experience for first and possibly second years is the Spring Weeks, where you get to find out more about the company and get some hands-on experience. I got spring weeks at JP Morgan and Jane Street, and I was so grateful for all the things I learnt during the programmes, and it is an opportunity I recommend to everyone.
-</p>
-<p>
-    All in all, the things that I will certainly keep in mind from my first year is, apply early, apply to more companies so that you get more interview experience and don't risk not getting any internship, not being afraid and prepare more.
-</p>
-<p>
-    Last but not least, this was a little about me and about my experience. Another thing that happened to me in my first year, and everyone else, was a lockdown. During the lockdown, I got to develop the skills that I always wanted and think about my ambitions for the next year. I got the privilege of talking to Hafsa and I am so glad that our aims coincide. We want to bring up the Women in Tech Society to welcome all women and create a great community. I have so many things to share and so many opportunities I am aware of and I can't wait to have you all on board!
-</p>
-<p>
-    Love,
-    Valeria
+    <!--    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">-->
+    <!-- Bootstrap core CSS -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Source+Code+Pro" rel ="stylesheet">
+    <!--    <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">-->
+    <link rel="apple-touch-icon" href="/docs/4.5/assets/img/favicons/apple-touch-icon.png" sizes="180x180">
+    <link rel="icon" href="/docs/4.5/assets/img/favicons/favicon-32x32.png" sizes="32x32" type="image/png">
+    <link rel="icon" href="/docs/4.5/assets/img/favicons/favicon-16x16.png" sizes="16x16" type="image/png">
+    <link rel="manifest" href="/docs/4.5/assets/img/favicons/manifest.json">
+    <link rel="mask-icon" href="/docs/4.5/assets/img/favicons/safari-pinned-tab.svg" color="#563d7c">
+    <link rel="icon" href="/docs/4.5/assets/img/favicons/favicon.ico">
+    <meta name="msapplication-config" content="/docs/4.5/assets/img/favicons/browserconfig.xml">
+    <meta name="theme-color" content="#563d7c">
 
-</p>
+
+    <style>
+        .bd-placeholder-img {
+            font-size: 1.125rem;
+            text-anchor: middle;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+            user-select: none;
+        }
+
+        @media (min-width: 768px) {
+            .bd-placeholder-img-lg {
+                font-size: 3.5rem;
+            }
+        }
+    </style>
+    <!-- Custom styles for this template -->
+    <!--    <link type="text/css"  href=" sass_src 'home/styling.scss' " rel="stylesheet" media="screen">-->
+    <link type="text/css"  href="{% static 'home/blogpost.css' %}" rel="stylesheet">
+    <!--        <link type="text/css"  href="/home/static/home/style.css" rel="stylesheet" media="screen">-->
+</head>
+<body>
+
+    <h1>
+        A post discussing how your site is structured and in your own words a description of how Django works.
+    </h1>
+
+   <p>
+       This website is split into 5 main sections.
+       <ul>
+        <li>
+            ABOUT ME
+        </li>
+        <li>
+            EXPERIENCE
+        </li>
+        <li>
+            PROJECTS
+        </li>
+        <li>
+            BLOG
+        </li>
+        <li>
+            AWARDS
+        </li>
+    </ul>
+   </p>
+
+    <p>
+        ABOUT ME
+    </p>
+
+    <p>
+        This sections has a few sentences that are shown in the form of typewriting when you refresh the page. There are three buttons that spin when you hover on them
+        <ul>
+            <li>
+                My Linkedin page
+            </li>
+            <li>
+                My Github account
+            </li>
+            <li>
+                The possibility to send an email directly to me
+            </li>
+        </ul>
+
+        The button below says 'Open Resume'. If you click on it a new tab will appear with my latest CV in the PDF format.
+    </p>
+
+    <p>
+        EXPERIENCE
+    </p>
+
+    <p>
+        The section is formed of a timeline. While you scroll down, more jobs I had will appear either from left or right. The cards contain the logo of the company I interned at with the job title I undertook and with a short description.
+        The pink label on the cards show the date that I undertook the experience.
+    </p>
+
+    <p>
+        PROJECTS
+    </p>
+
+    <p>
+        The portfoilio is consisted of the projects(moile apps) I developed as part of various hackathons I participated in and different projects.
+        There are two projects on each row with the images showing the logos of the mobile applications. If you hover on the big images you will see a description of the mobile app and what it is doing.
+
+    </p>
+
+    <p>
+        BLOG
+    </p>
+    <p>
+        The cards in the blog area show different posts that I wrote. If you hover on it, it shows the date I wrote them. If you want to read more about them you can click on Read More.
+    </p>
+
+    <p>
+        ACHIEVEMENTS
+    </p>
+
+    <p>
+        There are three buttons showing my achievements in
+        <ul>
+            <li>
+                Programming competitions
+            </li>
+            <li>
+                Societies, Communities
+            </li>
+            <li>
+                Awards, scholarships
+            </li>
+        </ul>
+    </p>
+
+
+    <p>
+        Short description of how django works
+    </p>
+
+    <p>
+        Django is a framework that allows you to develop complicated application with little code and very organised structure. Django has anything you need for you to get up and running your website. It has its command line, web server, database, so you don't really need to do anything else.
+
+        Creating an app is easy. You just need to run (python django-admin.py startproject projectname) which will create a new folder with the projectname that you mentioned and it will already have the files that you can use to set up some settings. You can then create and app (python manage.py startapp appname)
+
+    </p>
+    <p>
+        In your app you will see these files
+        <ul>
+            <li>
+                models.py to design your models
+            </li>
+            <li>
+                urls.py to write your navigation urls
+            </li>
+            <li>
+                views.py to create your views, templates
+            </li>
+        </ul>
+
+        The models.py file is a very extraordinary organised way to look over the data that you have and how you represent your data. This is the file that shows how are your objects shown in your database.
+        For example I have three models for Jobs, Projects and Blog Posts. Models and databases are very easy way to handle more data. Now instead of writing down all my work experience in html file, I have a list of jobs in my database which I load and for every item in the list I show them in the html file. All with very little and very organised coding.
+
+        The urls.py describes the navigation between pages. For example when I click on a blog post in my website, a new page will appear, and there are some parameters that I sent in order for my app to know which information it should show on the page.
+
+        The views.py file is the one that wraps up all the data it has and sends the necessary details and triggers the pages that you want to be shown.
+
+
+    </p>
+
+    <p>
+        So when you launch you django web app, it firstly looks into your urls to see what patterns you've created and decides which view to show you. A request is made from the view to render the template that you want.
+        The views file processes the request with potential collection of data from database and renders the appropriate page and maybe sends some data from database that will be renedered on the page. The view passes the information to the requested page and the template that you created then shows the data in the format that you created.
+    </p>
+</body>
+
+
 </html>

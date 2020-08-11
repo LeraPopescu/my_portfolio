@@ -1,0 +1,29 @@
+:root {
+    --black: #000;
+    --off-white:#ffe8d4cf;
+    --white: #fff;
+    --accent-color: #f25c54;
+    --dark-accent-color: #f5453c;
+    --light-background-color: #f7b26740;
+    --dark-background-color: #f7b2677a;
+}
+
+body {
+    color: var(--black);
+    background-color: var(--off-white);
+    font-family: "Raleway", sans-serif;
+    padding: 40px;
+}
+
+h1 {
+    padding-bottom: 20px;
+    color: var(--accent-color);
+}
+
+p {
+    font-size: 25px;
+}
+
+li{
+    font-size: 17px;
+}

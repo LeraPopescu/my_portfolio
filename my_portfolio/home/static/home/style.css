@@ -258,7 +258,7 @@ a[href] {
     position: relative;
     width: 45%;
     /*padding-top: 40px;*/
-    padding-bottom: 5px;
+    padding-bottom: 15px;
     margin-bottom: 10px;
     border-radius: 4px;
 
@@ -292,15 +292,16 @@ a[href] {
 
 .timeline-content .timeline-card {
     padding: 0 !important;
-    font-size: 10px;
+    font-size: 25px;
+    /*padding: 4px;*/
 
 }
 
 #experience p {
     margin-left: 20px;
     margin-right: 10px;
-    padding: 0 5px 0 0;
-    font-size: 15px;
+    padding: 5px;
+    font-size: 20px;
 }
 
 
@@ -417,6 +418,7 @@ blockquote {
     /*opacity: 0;*/
     /*visibility: hidden;*/
 
+    padding: 15px;
     vertical-align: middle;
     /*background-color: #ccffff;*/
     -webkit-transition: all ease .5s;
@@ -428,8 +430,14 @@ blockquote {
 #projects .portfolio-item .portfolio-link .portfolio-hover:after {
     content: attr(data-text);
     position: absolute;
-    padding: 8px;
-    font-size: 35px;
+    padding: 50px 15px 50px 15px;
+    vertical-align: middle;
+    /*padding-top: 50px;*/
+    /*padding-bottom: 50px;*/
+    /*padding-left: 15px;*/
+    /*padding-right: 15px;*/
+
+    font-size: 20px;
     top:0;
     bottom:0;
     right:0;
@@ -455,7 +463,9 @@ blockquote {
     margin-top: -12px;
     vertical-align: middle;
     text-align: center;
-    font-size: 20px;
+    font-size: 10px;
+    padding-top: 45px;
+    padding-bottom: 45px;
     /*background: #ccffff;*/
 }
 
@@ -469,6 +479,7 @@ blockquote {
     padding: 15px;
     width: 100%;
     height: 90px;
+
     text-align: center;
     background-color: #fff;
 }
@@ -482,7 +493,7 @@ blockquote {
 #projects .portfolio-item .portfolio-caption p {
     margin: 0;
     font-family: "Droid Serif","Helvetica Neue",Helvetica,Arial,sans-serif;
-    font-size: 16px;
+    font-size: 15px;
     font-style: italic;
 }
 
@@ -518,6 +529,7 @@ blockquote {
     margin-top: 150px;
     display: block;
     position: relative;
+    margin-bottom: 100px;
     /*padding: 0;*/
 }
 .blog-card {
@@ -760,30 +772,30 @@ blockquote {
     margin: 50px;
 }
 
-#awards .container .service-list {
+#awards .container .awards-list {
     width: 100%;
     float: left;
     height: auto;
     margin: 0 0 50px;
 }
 
-.service-list h4 {
+.awards-list h4 {
     text-transform: capitalize;
 }
 
-.service-list p {
-    font-size: 17px;
+.awards-list p {
+    font-size: 13px;
     margin: 0;
 }
 
-.service-list .icon {
+.awards-list .icon {
     width: 100%;
     float: left;
     height: auto;
     margin: 0 0 20px;
 }
 
-.service-list .fa {
+.awards-list .fa {
     width: 85px;
     line-height: 85px;
     background: #fff;
@@ -797,16 +809,16 @@ blockquote {
     transition: all 0.4s ease-in-out;
 }
 
-.service-list h3 {
+.awards-list h3 {
     text-transform: capitalize;
 }
 
-.service-list:hover .icon .fa {
+.awards-list:hover .icon .fa {
     background: #ff8500;
     color: #fff;
 }
 
-#awards .col-xs-12:nth-last-child(-n+3) .service-list {
+#awards .col-xs-12:nth-last-child(-n+3) .awards-list {
     margin: 0;
 }
 

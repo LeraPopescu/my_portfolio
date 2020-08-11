@@ -12,4 +12,4 @@ def home_view(request):
 def detail(request, blog_name):
     print(blog_name)
     #blog_name = get_object_or_404(BlogPost, pk = blog_name)
-    return render(request, 'home/' + blog_name + '.html', {'job': blog_name})
+    return render(request, 'home/' + blog_name + '.html') #{'job': blog_name}
