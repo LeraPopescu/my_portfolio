@@ -27,3 +27,8 @@ p {
 li{
     font-size: 17px;
 }
+
+p .title {
+    font-weight: bold;
+
+}
